@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "kafka-python-msk"
+version = "0.1.0"
+description = ""
+authors = ["Abdurrahman Harits Ghiffary <abdmanharits@gmail.com>"]
+license = "mit"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+kafka-python = "^2.1.2"
+aws-msk-iam-sasl-signer-python = "^1.0.2"
+python-dotenv = "^1.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
