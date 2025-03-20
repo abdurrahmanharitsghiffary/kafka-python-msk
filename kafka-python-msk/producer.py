@@ -4,6 +4,7 @@ import socket
 import os
 import dotenv
 from aws_msk_iam_sasl_signer import MSKAuthTokenProvider
+from kafka.sasl.oauth import AbstractTokenProvider
 
 dotenv.load_dotenv()
 
@@ -13,7 +14,7 @@ BOOTSTRAP_SERVERS = os.getenv("BOOTSTRAP_SERVERS")
 if not AWS_REGION or not BOOTSTRAP_SERVERS:
     raise ValueError("Missing AWS_REGION or BOOTSTRAP_SERVERS environment variables")
 
-class MSKTokenProvider:
+class MSKTokenProvider(AbstractTokenProvider):
     def token(self):
         token, _ = MSKAuthTokenProvider.generate_authentication_token(
             region=AWS_REGION, 
