@@ -1,0 +1,60 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Poetry virtual environments
+.env
+.venv
+
+# Distribution / packaging
+.Python
+build/
+dist/
+*.egg-info/
+*.egg
+
+# C extensions
+*.so
+
+# Unit test / coverage reports
+.coverage
+.tox/
+nosetests.xml
+pytest_cache/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# Poetry cache and dependencies
+poetry.lock
+poetry.toml
+
+# Environment variables
+.envrc
+.env.local
+.env.*.local
+
+# Jupyter notebooks
+.ipynb_checkpoints
+
+# Docker
+*.dockerignore
+docker-compose.override.yml
+
+# AWS / Cloud provider credentials
+*.pem
+*.key
+.aws/
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
