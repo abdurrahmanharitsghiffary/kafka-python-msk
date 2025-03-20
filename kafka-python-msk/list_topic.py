@@ -25,7 +25,7 @@ topic = NewTopic(
     replication_factor=1
 )
 
-admin_client = KafkaAdminClient(BOOTSTRAP_SERVERS.split(","), security_protocol="SASL_SSL", sasl_mechanism="OAUTHBEARER", sasl_oauth_token_provider=tp, client_id=socket.gethostname())
+admin_client = KafkaAdminClient(bootstrap_servers=BOOTSTRAP_SERVERS.split(","), security_protocol="SASL_SSL", sasl_mechanism="OAUTHBEARER", sasl_oauth_token_provider=tp, client_id=socket.gethostname())
 
 metadata = admin_client.list_topics()
 
