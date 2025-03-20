@@ -24,14 +24,14 @@ tp = MSKTokenProvider()
 
 # Example Usage
 topic = NewTopic(
-    name="my_topic",
+    name="steam-data",
     num_partitions=1,
     replication_factor=1
 )
 
 admin_client = KafkaAdminClient(bootstrap_servers=BOOTSTRAP_SERVERS.split(","), security_protocol="SASL_SSL", sasl_mechanism="OAUTHBEARER", sasl_oauth_token_provider=tp, client_id=socket.gethostname())
 
-response = admin_client.create_topics("stream-data")
+response = admin_client.create_topics([topic])
 
 
 print("Response: ",  response)
